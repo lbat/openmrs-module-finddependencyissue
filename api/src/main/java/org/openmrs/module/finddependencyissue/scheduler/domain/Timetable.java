@@ -1,7 +1,7 @@
 package org.openmrs.module.finddependencyissue.scheduler.domain;
 
 import org.joda.time.DateTime;
-import org.openmrs.Location;
+import org.openmrs.module.finddependencyissue.Location;
 import org.openmrs.module.finddependencyissue.Surgery;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;

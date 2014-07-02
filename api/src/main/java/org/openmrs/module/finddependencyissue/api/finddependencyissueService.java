@@ -13,8 +13,7 @@
  */
 package org.openmrs.module.finddependencyissue.api;
 
-import org.openmrs.api.OpenmrsService;
-import org.springframework.transaction.annotation.Transactional;
+//import org.springframework.transaction.annotation.Transactional;
 
 /**
  * This service exposes module's core functionality. It is a Spring managed bean which is configured in moduleApplicationContext.xml.
@@ -26,8 +25,8 @@ import org.springframework.transaction.annotation.Transactional;
  * 
  * @see org.openmrs.api.context.Context
  */
-@Transactional
-public interface finddependencyissueService extends OpenmrsService {
+//@Transactional
+public interface finddependencyissueService{//} extends OpenmrsService {
      
 	/*
 	 * Add service methods here

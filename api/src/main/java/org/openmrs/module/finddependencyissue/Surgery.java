@@ -1,39 +1,30 @@
 package org.openmrs.module.finddependencyissue;
 
 import org.joda.time.DateTime;
-import org.openmrs.Location;
-import org.openmrs.Patient;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * Defines a Surgery in the system.
  */
-@Entity
-@Table(name = "surgery")
+//@Entity
+//@Table(name = "surgery")
 public class Surgery {
 
-	@Id
-	@GeneratedValue
-	@Column(name = "surgery_id")
+//	@Id
+//	@GeneratedValue
+//	@Column(name = "surgery_id")
 	private Integer surgeryId;
 
-	@ManyToOne
-	@JoinColumn(name = "patient_id", nullable = false)
+//	@ManyToOne
+//	@JoinColumn(name = "patient_id", nullable = false)
 	private Patient patient;
 
-	@ManyToOne
-	@JoinColumn(name = "procedure_id", nullable = false)
+//	@ManyToOne
+//	@JoinColumn(name = "procedure_id", nullable = false)
 	private Procedure procedure;
 
-	@Column(name = "surgery_completed", columnDefinition = "boolean default false", nullable = false)
+//	@Column(name = "surgery_completed", columnDefinition = "boolean default false", nullable = false)
 	private Boolean surgeryCompleted  = false;
 
 	/**
@@ -50,8 +41,8 @@ public class Surgery {
 //	@Type(type="org.joda.time.contrib.hibernate.PersistentDateTime")
 //	private DateTime datePlannedFinish;
 
-	@ManyToOne
-	@JoinColumn(name = "planned_location_id")
+//	@ManyToOne
+//	@JoinColumn(name = "planned_location_id")
 	private Location plannedLocation;
 
 	public int getSurgeryId() {
@@ -122,7 +113,7 @@ public class Surgery {
 	}
 
 
-		@Column(name = "date_planned_begin")
+//		@Column(name = "date_planned_begin")
 	private Date datePlannedBeginTEST;
 
 	public Date getDatePlannedFinishTEST() {
@@ -144,7 +135,7 @@ public class Surgery {
 	/**
 	 * Planned finish date of this surgery
 	 */
-		@Column(name = "date_planned_finish")
+//		@Column(name = "date_planned_finish")
 	private Date datePlannedFinishTEST;
 
 }

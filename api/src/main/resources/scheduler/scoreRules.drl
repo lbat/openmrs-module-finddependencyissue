@@ -24,7 +24,7 @@ import org.openmrs.module.finddependencyissue.scheduler.domain.PlannedSurgery;
 
 import org.joda.time.DateTime;
 import java.util.Date
-import org.openmrs.scheduler.Schedule
+//import org.openmrs.scheduler.Schedule
 import org.joda.time.Period;
 
 //import org.optaplanner.examples.curriculumcourse.domain.Course;
