@@ -130,29 +130,29 @@
                 <type>jar</type>
             </dependency>
 
-            <!--<dependency>-->
-            <!--<groupId>org.optaplanner</groupId>-->
-            <!--<artifactId>optaplanner-benchmark</artifactId>-->
-            <!--<version>${optaplannerVersion}</version>-->
-            <!--<type>jar</type>-->
-            <!--</dependency>-->
+            <dependency>
+            <groupId>org.optaplanner</groupId>
+            <artifactId>optaplanner-benchmark</artifactId>
+            <version>${optaplannerVersion}</version>
+            <type>jar</type>
+            </dependency>
 
             <dependency>
                 <groupId>org.drools</groupId>
                 <artifactId>drools-compiler</artifactId>
-                <scope>test</scope>
+                <!--<scope>test</scope>-->
                 <version>${droolsCompilerVersion}</version>
                 <type>jar</type>
             </dependency>
 
-            <!-- Xstream -->
-            <dependency>
-                <groupId>com.thoughtworks.xstream</groupId>
-                <artifactId>xstream</artifactId>
-                <version>${xstreamVersion}</version>
-                <type>jar</type>
-                <!--<scope>provided</scope>-->
-            </dependency>
+            <!--&lt;!&ndash; Xstream &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>com.thoughtworks.xstream</groupId>-->
+                <!--<artifactId>xstream</artifactId>-->
+                <!--<version>${xstreamVersion}</version>-->
+                <!--<type>jar</type>-->
+                <!--&lt;!&ndash;<scope>provided</scope>&ndash;&gt;-->
+            <!--</dependency>-->
 
             <!-- joda time -->
             <dependency>

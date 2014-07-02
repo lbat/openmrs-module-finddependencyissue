@@ -20,7 +20,7 @@ package scheduler;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
 
 import org.joda.time.Interval;
-import org.openmrs.module.operationtheater.scheduler.domain.PlannedSurgery;
+import org.openmrs.module.finddependencyissue.scheduler.domain.PlannedSurgery;
 
 import org.joda.time.DateTime;
 import java.util.Date
@@ -49,27 +49,29 @@ global HardSoftScoreHolder scoreHolder;
 //Operation Theater occupancy: two PlannedSurgeries in the same Location with overlapping periods
 rule "overlappingSurgeriesInSameOperationTheater"
     when
-        $left: PlannedSurgery($location: location)
-        $right: PlannedSurgery(this != $left, location == $location, isOverlapping($left))
-        //prevent the double execution of this rule (AB, BA)
-        eval( System.identityHashCode($left) < System.identityHashCode($right))
+//        $left: PlannedSurgery($location: location)
+//        $right: PlannedSurgery(this != $left, location == $location, isOverlapping($left))
+//        //prevent the double execution of this rule (AB, BA)
+//        eval( System.identityHashCode($left) < System.identityHashCode($right))
+        eval(true)
     then
-        scoreHolder.addHardConstraintMatch(kcontext, -1);
+        System.out.println("test");
+//        scoreHolder.addHardConstraintMatch(kcontext, -1);
 end
 
 //// ############################################################################
 //// Soft constraints
 //// ############################################################################
 
-rule "firstComeFirstServed"
-    when
-        $surgery: PlannedSurgery($start : start, start != null)
-    then
-        DateTime $created = new DateTime($surgery.getSurgery().getDateCreated().getTime());
-        Period $period = new Period($created, $start);
-
-        scoreHolder.addSoftConstraintMatch(kcontext, -$period.getDays());
-end
+//rule "firstComeFirstServed"
+//    when
+//        $surgery: PlannedSurgery($start : start, start != null)
+//    then
+//        DateTime $created = new DateTime($surgery.getSurgery().getDateCreated().getTime());
+//        Period $period = new Period($created, $start);
+//
+//        scoreHolder.addSoftConstraintMatch(kcontext, -$period.getDays());
+//end
 
 //// Lectures: A missing or extra lecture of a course.
 //// This hard constraint is build-in: the correct number of Lecture's is created
