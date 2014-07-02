@@ -26,7 +26,7 @@ import java.net.URL;
 /**
  * This class contains the logic that is run every time this module is either started or stopped.
  */
-public class finddependencyissueActivator{//} implements ModuleActivator {
+public class finddependencyissueActivator implements org.openmrs.module.ModuleActivator {
 	
 //	protected Log log = LogFactory.getLog(getClass());
 		
